@@ -1,0 +1,49 @@
+
+.layui-form-item>.layui-form-label{
+	width: 90px;
+}
+
+.layui-form-pane>.layui-form-item{
+	float: left;
+	clear: none;
+}
+/* 请求错误没数据的css   */
+.layui-table-body,.layui-table-cell{
+	height: auto !important;
+}
+
+#layuiForm>.adOperation>.layui-input-inline{
+	text-align: center;
+}
+#layerVideo{
+	height: 100%;
+	position: relative;
+}
+#contentDiv{
+	float: right;
+}
+#videoDiv{
+	position: relative;
+}
+#videoDiv>img{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 160px;
+	height: 160px;
+}
+#videoDiv>marquee{
+	position: absolute;
+	top:0;left:0;
+	background: rgba(0,0,0,0.2);
+	color:#fff;
+}
+.layui-badge{
+	display: none;
+}
+.editor-ul>li{
+	position: absolute;
+}
+.swiper-container{
+	height: 100%;
+}

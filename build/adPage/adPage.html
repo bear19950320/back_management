@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title>广告管理</title>
+		<link href="../../main/img/logo.webp" rel="icon" type="image/icon">
+		<link rel="stylesheet" type="text/css" href="../../main/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/adPage.css" />
+		<link rel="stylesheet" type="text/css" href="../../layui/css/modules/layer/default/layer.css" />
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="../../main/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="../../main/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../main/css/animate.min.css" />
+	</head>
+
+	<body class="layui-row">
+		<!--  广告名称    -->
+		<div class="layui-form-item layui-form layui-form-pane">
+		    <div class="layui-form-item">
+			    <label class="layui-form-label">广告名称</label>
+			    <div class="layui-input-inline">
+			      <input type="text" name="ggmc" id="ggmc"  placeholder="请输入" autocomplete="off" class="layui-input">
+			    </div>
+			</div>
+			<!--  广告类型    -->
+			<div class="layui-form-item">
+			    <label class="layui-form-label">广告类型</label>
+			    <div class="layui-input-block">
+			      <select name="gglx" id="gglx">
+			        <option value="-1">全部</option>
+			        <option value="0">图文</option>
+			        <option value="1">视频</option>
+			        <option value="2">公告</option>
+			        <option value="3">消息</option>
+			      </select>
+			    </div>
+			</div>
+			<!-- 审核状态   -->
+			<div class="layui-form-item">
+			    <label class="layui-form-label">审核状态</label>
+			    <div class="layui-input-block">
+			      <select name="shzt" id="shzt">
+			        <option value="-1">全部</option>
+			        <option value="0">未提交</option>
+			        <option value="1">审核中</option>
+			        <option value="2">审核未通过</option>
+			        <option value="3">审核通过</option>
+			      </select>
+			    </div>
+			</div>
+			<!--  审核类型     -->
+			<div class="layui-form-item">
+			    <label class="layui-form-label">审核类型</label>
+			    <div class="layui-input-block">
+			      <select name="shlx" id="shlx">
+			        <option value="-1">全部</option>
+			        <option value="0">普通</option>
+			        <option value="1">加急</option>
+			      </select>
+			    </div>
+			</div>
+			<div class="layui-form-item">
+				<button class="layui-btn" onkeydown="keysearch(this)" id="search">搜索</button>
+			</div>
+			
+		</div>
+		<table class="layui-table" id="tabledemo" lay-filter="demo"></table>  
+		<script type="text/javascript" id="pmxz">
+			{{# if(d.pmxz == '1'){ }}
+				竖屏
+			{{# } else if(d.pmxz == '0'){ }}
+				横屏
+			{{# } }}
+		</script>
+		<script type="text/javascript" id="adtype">
+			{{# if(d.gglx == '0'){ }}
+				图文
+			{{# } else if(d.gglx == '1'){ }}
+				视频
+			{{# } else if(d.gglx == '2'){ }}
+				公告
+			{{# } else if(d.gglx == '3'){ }}
+				消息
+			{{# } }}
+		</script>
+		<script type="text/javascript" id="trialType">
+			{{# if(d.shlx == '0'){ }}
+				普通
+			{{# } else if(d.shlx == '1'){ }}
+				<span style="color:red">加急</span>
+			{{# } }}
+		</script>
+		<script type="text/javascript" id="trialState">
+			{{# if(d.shzt == '0'){ }}
+				<span style="">未提交</span>
+			{{# } else if(d.shzt == '1'){ }}
+				<span style="color:#1E9FFF">审核中</span>
+			{{# } else if(d.shzt == '2'){ }}
+			    <span style="color:#ed0505">未通过</span>
+			{{# } else if(d.shzt == '3'){ }}
+				<span style="color:#5FB878">已通过</span>
+			{{# } }}
+		</script>
+		<script type="text/html" id="barDemo">
+			<a class="layui-btn layui-btn-xs" lay-event="detail">查看</a>
+		</script>
+		<!-- 调用JS的Start -->
+		<script src="../../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../main/js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/adPage.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 调用JS的End -->
+	</body>
+
+</html>

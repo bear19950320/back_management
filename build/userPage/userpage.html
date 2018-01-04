@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title>广告管理</title>
+		<link href="../../main/img/logo.webp" rel="icon" type="image/icon">
+		<link rel="stylesheet" type="text/css" href="../../main/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/userPage.css" />
+		<link rel="stylesheet" type="text/css" href="../../layui/css/modules/layer/default/layer.css" />
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="../../main/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="../../main/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../main/css/animate.min.css" />
+	</head>
+
+	<body class="layui-row">
+		<!--  广告名称    --><!--  广告名称    -->
+		<div class="layui-form-item layui-form layui-form-pane">
+		    <div class="layui-form-item">
+			    <div class="layui-input-inline">
+			      <input type="text" name="ggmc" id="condition"  placeholder="请输入" autocomplete="off" class="layui-input">
+			    </div>
+			</div>
+			<div class="layui-form-item">
+				<button class="layui-btn" id="search">搜索</button>
+			</div>
+			<div class="layui-form-item pull-right">
+			    <button class="layui-btn" onclick="adduserBtn()" id="adduserBtn" >添加用户</button>
+			</div>
+		</div>
+		
+		<table class="layui-table" id="tabledemo" lay-filter="demo"></table>  
+		<script type="text/javascript" id="sex">
+			{{# if(d.xb == '0'){ }}
+				女
+			{{# } else if(d.xb == '1'){ }}
+				男
+			{{# } }}
+		</script>
+		<!-- ajax("getSysAuthorityssyssuthorityapi","GET",'',"JSON",function(data){ console.log(data)})-->
+		<!--<script type="text/javascript" id="xtqx">
+			{{# var sys="["+JSON.stringify(d.xtqx)+"]";sys=JSON.parse(sys.replace(/,/g,'","'))}}
+			{{# console.log(xtqxmove) }}
+		</script>-->
+		<script type="text/html" id="barDemo">
+			<a class="layui-btn layui-btn-xs" lay-event="modify">修改</a>
+		</script>
+		<!-- 调用JS的Start -->
+		<script src="../../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../main/js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../main/js/base.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../main/js/des.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/userPage.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 调用JS的End -->
+	</body>
+
+</html>

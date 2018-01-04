@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>后台管理</title>
+ 	<link href="../../main/img/logo.webp" rel="icon" type="image/icon">
+	<link rel="stylesheet" type="text/css" href="../../main/css/main.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="../../layui/css/layui.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="../../css/home.css"/>
+	<link rel="stylesheet" type="text/css" href="../../layui/css/modules/layer/default/layer.css"/>
+	<link rel="stylesheet" type="text/css" href="../../main/icon/iconfont.css"/>
+	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="../../main/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../../main/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="../../main/css/animate.min.css"/>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">PPHD&nbsp;&nbsp;后台管理</div>
+	  <!-- 头部区域（可配合layui已有的水平导航） -->
+	  <ul class="layui-nav layui-layout-left" lay-filter="" id="menuTree">
+		  <li class="layui-nav-mi"><a href="javascript:;">拥有权限 : </a></li>
+		</ul>
+	    
+		<ul class="layui-nav layui-layout-right">
+    	<li class="layui-nav-item">
+    		<a href="javascript:;" id="lock" onclick="lock()"><i class="iconfont icon-suoding"></i>&nbsp;锁屏</a>
+    	</li>
+      <li class="layui-nav-item">
+        <a href="javascript:;" id="user-name">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img" id="user-img">
+       		<span id="admin-name">贤心</span>
+        </a>
+        <dl class="layui-nav-child">
+          <!--<dd><a href="">基本资料</a></dd>-->
+          <dd><a onclick="modify()" href="javascript:;">修改登录密码</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="javascript:;" onclick="loginOut()">注销</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll nav-left">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item">
+        	<a href="javascript:;" class="site-demo-active" data-type="tabAdd" data-url='userPage' name="userPage">用户管理</a>
+        </li>
+        <li class="layui-nav-item">
+        	<a href="javascript:;" class="site-demo-active" data-type="tabAdd" data-url='adPage' name="adPage">广告管理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+	<div class="layui-body">
+		<div class="layui-tab right-tab" lay-filter="demo" lay-allowClose="true">
+		  <ul class="layui-tab-title tab-title">
+		    <li class="layui-this" lay-id="home">控制面板 &nbsp;&nbsp;<i class="layui-icon">&#xe857;</i></li>
+		  </ul>
+		  <div class="layui-tab-content">
+		  	<div class="layui-tab-item layui-show">
+		  		<iframe src="../page/page.html" ></iframe>
+		  	</div><!-- ../page/page.html -->
+		    
+		  </div>
+		</div>
+	</div>
+	
+  <div class="layui-footer">
+    <!-- 底部固定区域 -->
+  © 2017 <span class="company">成都漫乐文化传播有限公司</span>
+  </div>
+</div><!--$("#user-img").attr("src")   $("#user-name").text()-->
+
+<script src="../../layui/layui.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../main/js/main.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../main/js/base.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../main/js/des.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../js/home.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

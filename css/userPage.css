@@ -1,0 +1,30 @@
+
+.layui-form-item{
+	margin: 0 5px;
+}
+.layui-form-item:first-child{
+	margin-left: 0;
+}
+.layui-form-item>.layui-form-label{
+	width: 90px;
+}
+.layui-form-item>.layui-input-block{
+	margin-left: 90px;
+}
+.layui-form-pane>.layui-form-item{
+	float: left;
+	clear: none;
+}
+/* 请求错误没数据的css   */
+.layui-table-body,.layui-table-cell{
+	height: auto !important;
+}
+
+#layuiForm>.adOperation>.layui-input-inline{
+	text-align: center;
+}
+iframe{
+	border: 0;
+	width:100%;
+	height:99%;
+}

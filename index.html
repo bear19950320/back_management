@@ -1,0 +1,75 @@
+<!-- 
+	    |               |
+            __     __       
+           /  \~~~/  \    
+     ,----(     ..    ) 
+    /      \__     __/   
+   /|         (\  |(
+  ^ \   /___\  /\ |   
+     |__|   |__|-" 
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<title>屏频互动</title>
+		<link href="main/img/logo.webp" rel="icon" type="image/icon">
+		<link rel="stylesheet" type="text/css" href="main/css/main.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/modules/layer/default/layer.css"/>
+		<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="main/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	    <script src="main/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	    <link rel="stylesheet" type="text/css" href="main/css/animate.min.css"/>
+	</head>
+	<body class="layui-row">
+		<div class="layui-col-md4 layui-col-md-offset4 layui-col-sm8 layui-col-sm-offset2 login">
+			<!-- 头部  -->
+			<header>
+				<img src="main/img/logo1.webp"/>
+			</header>
+			<!-- 身体  -->
+		    <section class="content" id="section">
+		    	<!-- 登录的提交  -->
+		    	<form class="layui-form" action="">
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">账号名 : </label>
+				    <div class="layui-input-inline">
+				      <input type="text" id="user" name="phoneNumber" required  lay-verify="required" placeholder="用户ID/手机号登陆" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <label class="layui-form-label">密码 : </label>
+				    <div class="layui-input-inline">
+				      <input type="password" id="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+				    </div>
+				  </div>
+				  <div class="layui-form-item">
+				    <div class="loginBtnBody">
+				      <button class="layui-btn pull-right" lay-submit lay-filter="formDemo">立即登陆</button>
+				    </div>
+				  </div>
+				  <div class="layui-form-item passwordAndUser">
+				  	<!--<a href="javascript:;">忘记密码</a>&nbsp;<span> &nbsp;&nbsp;|&nbsp;&nbsp; </span>&nbsp;<a href="build/register/register.html">注册账号</a>-->
+				  </div>
+				</form>
+		    </section>
+		</div>
+		<!-- 调用JS的Start -->
+		
+		<script src="layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="main/js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="main/js/base.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="main/js/des.js" type="text/javascript" charset="utf-8"></script>
+	    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	     <!-- 调用JS的End -->
+	</body>
+</html>
